@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Global -->
+    <title>Swan UI Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Experimental UI Framework">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon.png" />
+    <!-- Styles and fonts -->
+    <link href="styles/css/styles.css" media="screen" rel="stylesheet">
+    <!-- IE support -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="layout">
+    <!-- Layout Header :::::::::::::::::::: -->
+    <header class="layout-header section">
+      <div class="section-content">
+        <!-- Logo -->
+        <a class="logo" href="index.html"><img src="images/logo-white.png" alt=""></a>
+        <nav id="menu-main" class="menu" role="navigation">
+          <!-- Menu -->
+          <ul>
+            <li><a href="javascript:void(0)">Ejercicio 1</a></li>
+            <li><a href="javascript:void(0)">Ejercicio 2</a></li>
+            <li><a href="javascript:void(0)">Ejercicio 3</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="menu-mobile-open">☰</button>
+      </div>
+      <div class="menu-mobile-fade-screen"></div>
+    </header>
+    <!-- Layout Main Content :::::::::::::::::::: -->
+    <main class="layout-main" role="main">
+      <!-- Section 1 :::::::::::::::::::::::::::: -->
+      <section class="section">
+        <div class="section-content pad">
+
+          <h1>Hola {{ name }}</h1>
+
+          <input type="text" v-model="name">
+
+          <pre>{{ $data | json }}</pre>
+
+        </div>
+      </section>
+    </main>
+
+</div>
+
+<!-- Scripts -->
+<script src="scripts/vue-1.0.16.js"></script>
+
+<script type="text/javascript">
+
+  new Vue({
+
+    el: "body",
+
+    data: {
+      name: "Sebastian Serna"
+      }
+
+  });
+
+</script>
+
+</body>
+</html>
