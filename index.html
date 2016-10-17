@@ -45,6 +45,8 @@
 
           <input type="text" v-model="name">
 
+          <h2 v-if="name">Hola {{ name }}</h2>
+
           <pre>{{ $data | json }}</pre>
 
         </div>
@@ -65,6 +67,8 @@
     data: {
       name: "Sebastian Serna"
       }
+
+  
 
   });
 
